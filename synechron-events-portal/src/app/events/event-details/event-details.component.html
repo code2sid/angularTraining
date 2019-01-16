@@ -1,0 +1,48 @@
+<div class="conatiner" *ngIf="e">
+    <h1 [innerText]="pageTitle+e.eventName"></h1>
+    <br>
+    <table class="table table-hover table-striped">
+        <tr>
+            <th>EventId</th>
+            <td><span [innerText]="e.eventId"></span></td>
+        </tr>
+        <tr>
+            <th>EventCode</th>
+            <td><span [innerText]="e.eventCode | lowercase"></span></td>
+        </tr>
+        <tr>
+            <th>EventName</th>
+            <td><span [innerText]="e.eventName | uppercase"></span></td>
+        </tr>
+        <tr>
+            <th>StartDate</th>
+            <td><span [innerText]="e.startDate | date"></span></td>
+        </tr>
+        <tr>
+            <th>EndDate</th>
+            <td><span [innerText]="e.endDate | date"></span></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><span [innerText]="e.description | titlecase "></span></td>
+        </tr>
+        <tr>
+            <th>fees</th>
+            <td><span [innerText]="e.fees | currency:'INR'"></span></td>
+        </tr>
+        <tr>
+            <th>attendance</th>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        [style.width]="e.attendance+'%'" 
+                        [title]="e.attendance+'%'">{{e.attendance+'%'}}</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>logo</th>
+            <td><img style="width:50px;" [src]="e.logo" [alt]="e.eventName" [title]="e.eventName"></td>
+        </tr>
+    </table>
+</div>

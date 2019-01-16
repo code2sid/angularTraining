@@ -4,6 +4,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 import { EmployeesListComponent } from "./employees/employees-list/employees-list.component";
 import { EmployeeDetailsComponent } from "./employees/employee-details/employee-details.component";
+import { EventsListComponent } from "./events/events-lists/events-list.component";
+import { EventDetailsComponent } from "./events/event-details/event-details.component";
 
 @NgModule({
 	imports: [BrowserModule],
@@ -11,7 +13,9 @@ import { EmployeeDetailsComponent } from "./employees/employee-details/employee-
 	declarations: [
 		AppComponent,
 		EmployeesListComponent,
-		EmployeeDetailsComponent
+		EmployeeDetailsComponent,
+		EventsListComponent,
+		EventDetailsComponent
 	],
 	providers: [],
 	bootstrap: [AppComponent],
