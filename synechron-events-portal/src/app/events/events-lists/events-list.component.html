@@ -1,6 +1,15 @@
 <h1 [innerText]="pageTitle"></h1>
 <br>
 <h6 [innerText]="subTitle"></h6>
+<div class="container">
+    <div class="form-group">
+        <fieldset>
+            <label for="inputSearch">Search Events</label>
+            <input id="inputSearch" class="form-control" type="search" placeholder="seach events" 
+            [(ngModel)]="searchChar">
+        </fieldset>
+    </div>
+</div>
 <table class="table table-hover table-striped" *ngIf="events && events.length > 0;else noDataTemplate">
     <thead>
         <tr>
@@ -12,7 +21,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of events">
+        <tr *ngFor="let e of events | eventsFilter:searchChar">
             <td><span [innerText]="e.eventCode | lowercase"></span></td>
             <td><span [innerText]="e.eventName | uppercase"></span></td>
             <td><span [innerText]="e.startDate | date:'MMM dd, yyyy'"></span></td>
