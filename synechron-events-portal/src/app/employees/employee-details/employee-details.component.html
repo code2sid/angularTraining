@@ -1,0 +1,46 @@
+<div class="container" *ngIf="emp">
+    <h1 [innerText]="pageTitle+emp.employeeName"></h1>
+    <br>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>EmployeeId</th>
+        <td><span [innerText]="emp.employeeId"></span></td>
+    </tr>
+    <tr>
+        <th>EmployeeName</th>
+        <td><span [innerText]="emp.employeeName"></span></td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td><span [innerText]="emp.address"></span></td>
+    </tr>
+    <tr>
+        <th>City</th>
+        <td><span [innerText]="emp.city"></span></td>
+    </tr>
+    <tr>
+        <th>State</th>
+        <td><span [innerText]="emp.state"></span></td>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <td><span [innerText]="emp.country"></span></td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td><span [innerText]="emp.phone"></span></td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td><span [innerText]="emp.email"></span></td>
+    </tr>
+    <tr>
+        <th>Project</th>
+        <td><span [innerText]="emp.project"></span></td>
+    </tr>
+    <tr>
+        <th>Avatar</th>
+        <td><img [src]="emp.avatar" [alt]="emp.employeeName" [title]="emp.employeeName"></td>
+    </tr>
+</table>
+</div>
