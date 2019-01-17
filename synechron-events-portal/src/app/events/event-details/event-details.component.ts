@@ -1,13 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Event } from '../models/event';
+import { EventsService } from '../../services/events.service';
 
 @Component({
     selector: 'event-details',
     templateUrl: 'event-details.component.html'
 })
 
-export class EventDetailsComponent {
-    constructor() { }
+export class EventDetailsComponent implements OnChanges {
+    constructor(private _service: EventsService) { }
     pageTitle: string = "Details of - ";
-    @Input('inputEvent') e: Event;
+    @Input('inputEventId') eventId: number;
+    e: Event;
+
+    ngOnChanges() {
+        this.e = this._service.getEvent(this.eventId);
+    }
 }
