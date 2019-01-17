@@ -9,9 +9,10 @@ import { AppComponent } from "./app.component";
 import { EmployeeModule } from "./employees/employee.module";
 import { EventsModule } from "./events/events.module";
 import { JphModule } from "./jph/jph.module";
+import { NavigationModule } from "./navigation/navigation.module";
 
 @NgModule({
-	imports: [BrowserModule, EmployeeModule, EventsModule, JphModule],
+	imports: [BrowserModule, EmployeeModule, EventsModule, JphModule, NavigationModule],
 	exports: [],
 	declarations: [
 		AppComponent
