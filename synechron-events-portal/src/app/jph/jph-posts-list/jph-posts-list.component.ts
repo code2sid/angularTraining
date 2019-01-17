@@ -12,7 +12,7 @@ export class JphPostsListComponent implements OnInit {
     pageTitle: string = "Jph placeholder's Post Data !";
     posts: Post[] = [];
     ngOnInit() {
-        this._service.getAllPosts()
+        this._service.getAll("posts")
             .subscribe(
                 result => this.posts = result,
                 error => console.log(error),

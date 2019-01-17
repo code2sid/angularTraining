@@ -12,7 +12,7 @@ export class JphUsersListComponent implements OnInit {
     users: User[] = [];
     pageTitle:string = "Jph Users list !!!";
     ngOnInit() {
-        this._service.getAllusers()
+        this._service.getAll("users")
             .subscribe(
                 result => this.users = result,
                 error => console.log(error),
