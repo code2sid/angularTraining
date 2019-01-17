@@ -35,14 +35,17 @@
             <td>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        [style.width]="e.attendance+'%'" 
-                        [title]="e.attendance+'%'">{{e.attendance+'%'}}</div>
+                        [style.width]="e.attendance+'%'" [title]="e.attendance+'%'">{{e.attendance+'%'}}</div>
                 </div>
             </td>
         </tr>
         <tr>
             <th>logo</th>
-            <td><img style="width:50px;" [src]="e.logo" [alt]="e.eventName" [title]="e.eventName"></td>
+            <td>
+                <img style="width:50px;" [src]="e.logo" [alt]="e.eventName" [title]="e.eventName">
+                <br>
+                <button class="btn btn-outline-danger" (click)="closeDetails()">Close details</button>
+            </td>
         </tr>
     </table>
 </div>

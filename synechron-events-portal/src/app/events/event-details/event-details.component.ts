@@ -20,4 +20,8 @@ export class EventDetailsComponent implements OnChanges {
             () => console.log("get selcted event call completed")
         );
     }
+
+    closeDetails(){
+        this.e = new Event();
+    }
 }
