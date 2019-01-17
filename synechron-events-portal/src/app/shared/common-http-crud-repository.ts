@@ -5,16 +5,14 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class CommonHttpCrudRepositiry<T> implements CommonHttpCrud<T>{
-    baseUrl: string = "http://jsonplaceholder.typicode.com";
-
     getAll(url: string): Observable<T[]> {
-        return this._service.get<T[]>(`${this.baseUrl}/${url}`);
+        return this._service.get<T[]>(url);
     }
     getSingle(id: number, url: string): Observable<T> {
-        return this._service.get<T>(`${this.baseUrl}/${url}/${id}`);
+        return this._service.get<T>(`${url}/${id}`);
     }
     addNew(dataObject: T, url: string): Observable<T> {
-        return this._service.post<T>(`${this.baseUrl}/${url}`, dataObject);
+        return this._service.post<T>(url, dataObject);
     }
     constructor(private _service: HttpClient) { }
 }

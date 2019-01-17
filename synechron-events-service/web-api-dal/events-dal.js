@@ -1,5 +1,5 @@
 const mongojs = require("mongojs");
-const db = mongojs("hr-events-db", ["events"]);
+const db = mongojs("sid-events-db", ["events"]);
 
 class EventsDal {
     getAllEvents() {

@@ -12,7 +12,7 @@ export class JphUsersListComponent implements OnInit {
     users: User[] = [];
     pageTitle:string = "Jph Users list !!!";
     ngOnInit() {
-        this._service.getAll("users")
+        this._service.getAll("http://jsonplaceholder.typicode.com/users")
             .subscribe(
                 result => this.users = result,
                 error => console.log(error),

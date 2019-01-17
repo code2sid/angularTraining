@@ -14,6 +14,10 @@ export class EventDetailsComponent implements OnChanges {
     e: Event;
 
     ngOnChanges() {
-        this.e = this._service.getEvent(this.eventId);
+        this._service.getSingle(this.eventId, "http://localhost:9090/api/events").subscribe(
+            result => this.e = result,
+            error => console.error(error),
+            () => console.log("get selcted event call completed")
+        );
     }
 }

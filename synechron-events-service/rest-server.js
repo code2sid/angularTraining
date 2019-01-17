@@ -14,6 +14,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(morgan("dev"));
+app.use("/api/events", eventsRoutes);
+
 app.post("/synauth", (request, response) => {
     auth.users.findOne({
         name: request.body.name
@@ -60,7 +62,6 @@ app.use((request, response, next) => {
         }
     });
 });
-app.use("/api/events", eventsRoutes);
 
 app.listen(9090, () => {
     console.log("REST API server is running on PORT : 9090");
