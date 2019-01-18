@@ -17,6 +17,7 @@
 		"@angular/forms": "^7.2.0",
 		"@angular/platform-browser": "^7.2.0",
 		"@angular/platform-browser-dynamic": "^7.2.0",
+		"@angular/router": "^7.2.1",
 		"bootstrap": "^4.2.1",
 		"bootswatch": "^4.2.1",
 		"core-js": "^2.6.2",
@@ -27,6 +28,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^9.6.2",
+		"angular-router-loader": "^0.8.5",
 		"angular2-template-loader": "^0.6.2",
 		"awesome-typescript-loader": "^5.2.1",
 		"copy-webpack-plugin": "^4.6.0",

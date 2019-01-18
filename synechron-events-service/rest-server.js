@@ -5,7 +5,7 @@ const eventsRoutes = require("./events-routes");
 const jwt = require("jsonwebtoken");
 const morgan = require("morgan");
 const mongojs = require("mongojs");
-const auth = mongojs("hr-events-db", ["users"]);
+const auth = mongojs("sid-events-db", ["users"]);
 const config = require("./config");
 
 const app = express();
@@ -14,9 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(morgan("dev"));
-app.use("/api/events", eventsRoutes);
 
 app.post("/synauth", (request, response) => {
+    console.log(request.body.password);
     auth.users.findOne({
         name: request.body.name
     }, (err, user) => {
@@ -62,7 +62,7 @@ app.use((request, response, next) => {
         }
     });
 });
-
+app.use("/api/events", eventsRoutes);
 app.listen(9090, () => {
     console.log("REST API server is running on PORT : 9090");
 });

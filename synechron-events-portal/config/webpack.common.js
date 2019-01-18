@@ -28,6 +28,10 @@ module.exports = {
 				],
 			},
 			{
+				test: /\.ts$/,
+				loader: "angular-router-loader",
+			},
+			{
 				test: /\.html$/,
 				loader: "html-loader",
 			},

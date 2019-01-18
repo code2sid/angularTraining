@@ -27,13 +27,13 @@
             <td><span [innerText]="e.startDate | date:'MMM dd, yyyy'"></span></td>
             <td><span [innerText]="e.fees | currency:'INR'"></span></td>
 
-            <td><button class="btn btn-outline-success" (click)="showDetails(e)">Show Details</button></td>
+            <td><button class="btn btn-outline-success"[routerLink]="['/events', e.eventId]">Show Details</button></td>
         </tr>
     </tbody>
 </table>
 <ng-template #noDataTemplate>
     <h3>No data found!!! please try after some time !!!</h3>
 </ng-template>
-<div *ngIf="selectedEvent">
+<!-- <div *ngIf="selectedEvent">
     <event-details [inputEventId]="selectedEvent.eventId"></event-details>
-</div>
+</div> -->

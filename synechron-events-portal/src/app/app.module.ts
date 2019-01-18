@@ -1,23 +1,24 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
-//components
+//Components
 import { AppComponent } from "./app.component";
 
-//pipes
-
-import { EmployeeModule } from "./employees/employee.module";
-import { EventsModule } from "./events/events.module";
-import { JphModule } from "./jph/jph.module";
+//Modules
 import { NavigationModule } from "./navigation/navigation.module";
+import { appRoutes } from "./app.route";
+import { SecurityModule } from "./security/security.module";
 
 @NgModule({
-	imports: [BrowserModule, EmployeeModule, EventsModule, JphModule, NavigationModule],
-	exports: [],
-	declarations: [
-		AppComponent
+	imports: [
+		BrowserModule,
+		NavigationModule,
+		appRoutes,
+		SecurityModule
 	],
+	exports: [],
+	declarations: [AppComponent],
 	providers: [],
 	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

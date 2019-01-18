@@ -44,7 +44,7 @@
             <td>
                 <img style="width:50px;" [src]="e.logo" [alt]="e.eventName" [title]="e.eventName">
                 <br>
-                <button class="btn btn-outline-danger" (click)="closeDetails()">Close details</button>
+                <button class="btn btn-outline-danger" [routerLink]="['/events']">Back to Events</button>
             </td>
         </tr>
     </table>

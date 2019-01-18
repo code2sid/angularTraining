@@ -40,7 +40,11 @@
     </tr>
     <tr>
         <th>Avatar</th>
-        <td><img [src]="emp.avatar" [alt]="emp.employeeName" [title]="emp.employeeName"></td>
+        <td>
+            <img [src]="emp.avatar" [alt]="emp.employeeName" [title]="emp.employeeName">
+            <br>
+            <button class="btn btn-outline-danger" [routerLink]="['/employees']" routerLinkActive="router-link-active" >Close Details</button>
+        </td>
     </tr>
 </table>
 </div>

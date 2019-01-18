@@ -24,8 +24,8 @@ export class EventsListComponent implements OnInit {
     pageTitle: string = "Synechron Events List !!!";
     subTitle: string = "Events managed by Synechron HR, Pune !!!";
     events: Event[] = [];
-    selectedEvent: Event;
-    showDetails(event: Event): void {
-        this.selectedEvent = event;
-    }
+    // selectedEvent: Event;
+    // showDetails(event: Event): void {
+    //     this.selectedEvent = event;
+    // }
 }
